@@ -94,11 +94,9 @@
 }
 
 .welcome {
-  background-color: $black-color;
-}
-
-.welcome-container {
   background: url(../images/welcome.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 220px;
   padding-bottom: 160px;
 }
