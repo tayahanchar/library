@@ -1,0 +1,94 @@
+@import 'var.scss';
+
+@font-face {
+  font-family: "Inter";  
+  src: url("./Inter/Inter-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Forum";  
+  src: url("./Forum/Forum-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: 300;
+}
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $black-color;
+  text-decoration: none;
+  list-style: none;
+
+}
+
+.header {
+  background-color: $black-color;
+  color: $white-color;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header-container {
+  @extend %flex-row;
+  gap: 60px;
+}
+
+.logo {
+  color: $white-color;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  font-family: 'Forum', serif;
+  transition: 1s;
+
+  &:hover {
+    color: $brown-color;
+  }
+}
+
+.header-right {
+  @extend %flex-row;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  max-width: 652px;
+}
+
+.nav {
+  flex-grow: 1;
+  max-width: 584px;
+}
+
+.nav-list {
+  @extend %flex-row;
+  gap: 10px;
+}
+
+.nav-list__link {
+  color: $white-color;
+  font-size: 20px;
+  line-height: 50px;
+  font-family: 'Inter', sans-serif;
+  transition: 1s;
+
+    &:hover {
+      color: $brown-color;
+    }
+}
+
+.profile {
+  cursor: pointer;
+}
