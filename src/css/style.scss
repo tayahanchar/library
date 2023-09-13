@@ -92,3 +92,27 @@
 .profile {
   cursor: pointer;
 }
+
+.welcome {
+  background-color: $black-color;
+}
+
+.welcome-container {
+  background: url(../images/welcome.jpg);
+  padding-top: 220px;
+  padding-bottom: 160px;
+}
+
+.welcome__title {
+  width: 600px;
+  padding: 35px 40px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-color;
+  background-color: $dark-black-color;
+  text-align: center;
+  font-family: 'Forum', serif;
+}
