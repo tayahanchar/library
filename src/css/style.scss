@@ -41,6 +41,10 @@
   margin: 0 auto;
 }
 
+.section-container {
+  padding: 0 20px;
+}
+
 .header-container {
   @extend %flex-row;
   gap: 60px;
@@ -113,4 +117,58 @@
   background-color: $dark-black-color;
   text-align: center;
   font-family: 'Forum', serif;
+}
+
+.title {
+  color: $dark-black-color;
+  font-family: 'Forum', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 20px 0px 61px 0px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  height: 1px;
+  width: 50px;
+  background-color: $black-color;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+}
+
+.corusel {
+  padding: 20px 0px 40px 0px;
+  @extend %flex-row;
+}
+
+.corusel-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.corusel-control__item {
+  width: 16px;
+  height: 16px;
+  background-color: $dark-black-color;
+  border-radius: 50%;
+}
+
+.corusel-control__item--active {
+  background-color: $brown-color;
 }
