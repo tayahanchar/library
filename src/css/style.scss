@@ -160,6 +160,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 10px;
+  padding-bottom: 40px;
 }
 
 .corusel-control__item {
@@ -171,4 +172,25 @@
 
 .corusel-control__item--active {
   background-color: $brown-color;
+}
+
+.favorites_description {
+  padding-bottom: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.favorites label {
+  padding-left: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.radio-list {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 95px;
 }
