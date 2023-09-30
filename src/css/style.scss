@@ -189,8 +189,97 @@
 }
 
 .radio-list {
-  padding-bottom: 50px;
+  padding-bottom: 39px;
   display: flex;
   flex-direction: row;
   gap: 95px;
+}
+
+.books-list {
+  @extend %flex-row;
+  flex-wrap: wrap;
+  padding-right: 40px;
+  gap: 40px 0px;
+}
+
+.book {
+  position: relative;
+  width: 550px;
+  height: 555px;
+  border: 1px solid $black-color;
+  padding: 15px 20px;
+}
+
+.category {
+  position: relative;
+  font-family: $forum-font;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.category::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  bottom: 0px;
+  left: 0px;
+  background-color: $brown-color;
+}
+
+.book_name {
+  padding-top: 18px;
+  font-family: $inter-font;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.book_author {
+  font-family: $inter-font;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.book_description {
+  font-family: $inter-font;
+  width: 355px;
+  padding-top: 20px;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.book__img {
+  position: absolute;
+  bottom: 0px;
+  right: -40px;
+}
+
+.book_buy {
+  position: absolute;
+  bottom: 15px;
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  font-family: $inter-font;
+  font-size: 10px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid $dark-black-color;
+  cursor: pointer;
+  transition: 1s;
+
+  &:hover {
+    background-color: $brown-color;
+    border: 1px solid $brown-color;
+  }
 }
