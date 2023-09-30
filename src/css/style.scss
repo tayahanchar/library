@@ -297,6 +297,7 @@
 
 .menu {
   @extend %flex-row;
+  padding-bottom: 40px;
 }
 
 .menu__title {
@@ -336,7 +337,6 @@
   padding-left: 50px;
 }
 
-
 .title-right {
   text-align: right;
 }
@@ -347,12 +347,6 @@
   position: relative;
 }
 
-.gap {
-  width: 100px;
-  height: 1px;
-  background-color: $brown-color;
-}
-
 .menu_item-price::before {
   content: "";
   position: absolute;
@@ -361,4 +355,35 @@
   bottom: 20px;
   right: 105px;
   background-color: $brown-color;
+}
+
+.contacts__description {
+  @extend %flex-row;
+  font-family: $inter-font;
+  font-size: 20px;
+  line-height: 40px; 
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding-bottom: 40px;
+}
+
+.phones-list-title {
+  padding-bottom: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.phones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.staff-title {
+  padding-bottom: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
 }
