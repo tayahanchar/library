@@ -200,6 +200,7 @@
   flex-wrap: wrap;
   padding-right: 40px;
   gap: 40px 0px;
+  padding-bottom: 40px;
 }
 
 .book {
@@ -259,7 +260,7 @@
 
 .book__img {
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
   right: -40px;
 }
 
@@ -282,4 +283,82 @@
     background-color: $brown-color;
     border: 1px solid $brown-color;
   }
+}
+
+.shop_description {
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  font-family: $inter-font;
+}
+
+.menu {
+  @extend %flex-row;
+}
+
+.menu__title {
+  padding-bottom: 40px;
+  color: $brown-color;
+  font-size: 40px;
+  line-height: 40px; 
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-family: $forum-font;
+}
+
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  width: 462px;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.menu_item-name {
+  color: #000;
+  font-family: $inter-font;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.menu_item-price {
+  color: #000;
+  font-family: $forum-font;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding-left: 50px;
+}
+
+
+.title-right {
+  text-align: right;
+}
+
+.menu_item {
+  @extend %flex-row;
+  align-items: center;
+  position: relative;
+}
+
+.gap {
+  width: 100px;
+  height: 1px;
+  background-color: $brown-color;
+}
+
+.menu_item-price::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  bottom: 20px;
+  right: 105px;
+  background-color: $brown-color;
 }
