@@ -387,3 +387,131 @@
   line-height: 40px;
   letter-spacing: 2px;
 }
+
+.library-cards_description {
+  @extend %flex-row;
+  margin-bottom: 40px;
+}
+
+.library-cards_form {
+  text-align: center;
+}
+
+.form-title {
+  font-family: $inter-font;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  padding-bottom: 30px;
+}
+
+.form {
+  width: 600px;
+  height: 386px;
+  border: 3px solid $brown-color;
+  padding: 17px;
+}
+
+.form-content {
+  padding:  20px 20px 25px 20px;
+  margin-bottom: 20px;
+  background-color: $brown-color;
+  font-family: $forum-font;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  text-align: left;
+}
+
+.form-input {
+  width: 520px;
+  height: 66px;
+  border-radius: 10px;
+  font-family: $forum-font;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  border: none;
+  padding: 0px 20px;
+
+  &::placeholder {
+    color: #8E8E8E;
+  }
+}
+
+.input-name {
+  margin: 20px 0px 25px 0px;
+}
+
+.form-button {
+  padding: 10px 40px;
+  text-align: center;
+  font-family: $inter-font;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: $dark-black-color;
+  border-radius: 2px;
+  border: 1px solid $dark-black-color;
+  background-color: inherit;
+  cursor: pointer;
+  transition: 1s;
+
+  &:hover {
+    border: 1px solid $brown-color;
+    background-color: $brown-color;
+  }
+}
+
+.register {
+  text-align: right;
+}
+
+.get-card {
+  font-family: $forum-font;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  padding-bottom: 35px;
+}
+
+.get-card-desc {
+  width: 456px;
+  font-family: $inter-font;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+  padding-bottom: 35px;
+}
+
+.button {
+  text-align: center;
+  font-family: $inter-font;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  border: 1px solid $dark-black-color;
+  width: 75px;
+  height: 30px;
+  padding: 10px 0px;
+  background-color: inherit;
+  cursor: pointer;
+  transition: 1s;
+
+  &:hover {
+    border: 1px solid $brown-color;
+    background-color: $brown-color;
+  }
+}
+
+.logg-in-button {
+  margin-left: 15px;
+}
