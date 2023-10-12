@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="./images/site.webmanifest">
   <title>Library</title>
 </head>
 <body>
@@ -14,26 +18,25 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a class="nav-list__link" href="">About</a>
+              <a class="nav-list__link" href="#about">About</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="">Favorites</a>
+              <a class="nav-list__link" href="#favorites">Favorites</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="">Coffee shop</a>
+              <a class="nav-list__link" href="#shop">Coffee shop</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="">Contacts</a>
+              <a class="nav-list__link" href="#contacts">Contacts</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="">Library Card</a>
+              <a class="nav-list__link" href="#card">Library Card</a>
             </li>
           </ul>
         </nav>
 
-        <img class="profile" src="./images/icon_profile.svg"></img>
+        <img class="profile" alt="profile" src="./images/icon_profile.svg">
       </div>
-
     </div>
   </header>
   <main class="main">
@@ -43,7 +46,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container section-container">
         <h2 class="title">About</h2>
         <p class="description">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
@@ -61,7 +64,7 @@
       </div>
     </section>
 
-    <section class="favorites">
+    <section class="favorites" id="favorites">
       <div class="container section-container">
         <h2 class="title">Favorites</h2>
         <p class="favorites_description">Pick favorites of season</p>
@@ -125,7 +128,7 @@
       </div>
     </section>
 
-    <section class="shop section-container">
+    <section class="shop section-container" id="shop">
       <div class="container">
         <h2 class="title">Coffee Shop</h2>
         <p class="shop_description">
@@ -197,7 +200,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="container section-container">
         <h2 class="title">Our Contacts</h2>
         <div class="contacts__description">
@@ -218,7 +221,7 @@
       </div>
     </section>
 
-    <section class="library-cards">
+    <section class="library-cards" id="card">
       <div class="container section-container">
         <h2 class="title">Digital Library Cards</h2>
 
@@ -251,11 +254,11 @@
     <div class="footer_data">
       <div>
         <p class="address">286 Cadman Plaza, New York, NY 11238, United States</p>
-        <div class="social-media">
-          <a href="https://twitter.com/"><img src="./images/u_twitter-alt.svg" alt="twitter"></a>
-          <a href="https://www.instagram.com"><img src="./images/u_instagram.svg" alt="instagram"></a>
-          <a href="https://www.facebook.com"><img src="./images/u_facebook-f.svg" alt="facebook"></a>
-        </div>
+        <ul class="social-media">
+          <li><a href="https://twitter.com/"><img src="./images/u_twitter-alt.svg" alt="twitter"></a></li>
+          <li><a href="https://www.instagram.com"><img src="./images/u_instagram.svg" alt="instagram"></a></li>
+          <li><a href="https://www.facebook.com"><img src="./images/u_facebook-f.svg" alt="facebook"></a></li>
+        </ul>
       </div>
 
       <div class="footer_data-right">
