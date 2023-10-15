@@ -316,6 +316,11 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 700;
+
+  @media (max-width: 520px) {
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
 }
 
 .favorites label {
@@ -323,6 +328,19 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 400;
+
+  @media (max-width: 765px) {
+    padding-left: 5px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 12px;
+    padding-left: 0px;
+  }
 }
 
 .radio-list {
@@ -330,6 +348,18 @@ html {
   display: flex;
   flex-direction: row;
   gap: 95px;
+
+  @media (max-width: 765px) {
+    gap: 35px;
+  }
+
+  @media (max-width: 520px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 400px) {
+    padding-bottom: 20px;
+  }
 }
 
 .books-list {
@@ -338,6 +368,11 @@ html {
   padding-right: 40px;
   gap: 40px 0px;
   padding-bottom: 40px;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .book {
@@ -346,6 +381,16 @@ html {
   height: 555px;
   border: 1px solid $black-color;
   padding: 15px 20px;
+
+  @media (max-width: 765px) {
+    width: 400px;
+    height: 401px;
+  }
+
+  @media (max-width: 520px) {
+    width: 280px;
+    height: 281px;
+  }
 }
 
 .category {
@@ -355,6 +400,11 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .category::after {
@@ -375,6 +425,14 @@ html {
   letter-spacing: 2px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (max-width: 765px) {
+    padding-top: 5px;
+  }
+
+  @media (max-width: 520px) {
+    line-height: 20px;
+  }
 }
 
 .book_author {
@@ -383,6 +441,11 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 520px) {
+    line-height: 20px;
+    font-size: 12px;
+  }
 }
 
 .book_description {
@@ -393,12 +456,41 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 765px) {
+    width: 285px;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 520px) {
+    width: 200px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 }
 
 .book__img {
   position: absolute;
   bottom: -1px;
   right: -40px;
+
+  @media (max-width: 765px) {
+    width: 130px;
+  }
+
+  @media (max-width: 520px) {
+    width: 80px;
+  }
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
 
 .book_buy {
