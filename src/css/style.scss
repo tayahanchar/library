@@ -52,6 +52,10 @@ html {
 .header-container {
   @extend %flex-row;
   gap: 60px;
+
+  @media (max-width: 520px) {
+    gap: 30px;
+  }
 }
 
 .logo {
@@ -65,6 +69,14 @@ html {
   &:hover {
     color: $brown-color;
   }
+
+  @media (max-width: 520px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 17px;
+  }
 }
 
 .header-right {
@@ -75,6 +87,34 @@ html {
   max-width: 652px;
 }
 
+.burger {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 520px) {
+    margin-left: 5px;
+    height: 15px;
+  }
+}
+
+.burger span {
+  width: 45px;
+  height: 1.5px;
+  background-color: $white-color;
+
+  @media (max-width: 520px) {
+    width: 30px;
+  }
+}
+
 .nav {
   flex-grow: 1;
   max-width: 584px;
@@ -83,6 +123,10 @@ html {
 .nav-list {
   @extend %flex-row;
   gap: 10px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .nav-list__link {
@@ -99,6 +143,11 @@ html {
 
 .profile {
   cursor: pointer;
+
+  @media (max-width: 520px) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .welcome {
@@ -107,6 +156,11 @@ html {
   background-size: cover;
   padding-top: 220px;
   padding-bottom: 160px;
+
+  @media (max-width: 430px) {
+    padding-top: 110px;
+    padding-bottom: 130px;
+  }
 }
 
 .welcome__title {
@@ -121,6 +175,23 @@ html {
   background-color: $dark-black-color;
   text-align: center;
   font-family: 'Forum', serif;
+
+  @media (max-width: 760px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 630px) {
+    width: 400px;
+    padding: 15px 20px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 430px) {
+    width: 290px;
+    padding: 7px 10px;
+    font-size: 26px;
+    line-height: 30px;
+  }
 }
 
 .title {
@@ -133,6 +204,11 @@ html {
   text-align: center;
   padding: 20px 0px 61px 0px;
   position: relative;
+
+  @media (max-width: 520px) {
+    font-size: 30px;
+    padding: 20px 0px 30px 0px;
+  }
 }
 
 .title::after {
@@ -144,6 +220,10 @@ html {
   left: 50%;
   transform: translate(-50%, 0);
   position: absolute;
+
+  @media (max-width: 520px) {
+    top: 60px;
+  }
 }
 
 .description {
@@ -152,11 +232,37 @@ html {
   font-weight: 400;
   line-height: 40px;
   text-align: center;
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .corusel {
+  width: 1400px;
   padding: 20px 0px 40px 0px;
   @extend %flex-row;
+  overflow: hidden;
+  gap: 25px;
+
+  @media (max-width: 1439px) {
+    width: 930px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 990px) {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0px 25px 0px;
+  }
+
+  @media (max-width: 520px) {
+    width: 280px;
+  }
 }
 
 .corusel-control {
@@ -165,6 +271,33 @@ html {
   justify-content: center;
   gap: 10px;
   padding-bottom: 40px;
+
+  & div:nth-child(5) {
+    display: none;
+  }
+
+  & div:nth-child(4) {
+    display: none;
+  }
+
+  @media (max-width: 1439px) {
+    & div:nth-child(5) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 990px) {
+    & div:nth-child(4) {
+      display: block;
+    }
+  }
+
+}
+
+.corusel_item {
+  @media (max-width: 520px) {
+    width: 280px;
+  }
 }
 
 .corusel-control__item {
@@ -183,6 +316,11 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 700;
+
+  @media (max-width: 520px) {
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
 }
 
 .favorites label {
@@ -190,6 +328,19 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 400;
+
+  @media (max-width: 765px) {
+    padding-left: 5px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 12px;
+    padding-left: 0px;
+  }
 }
 
 .radio-list {
@@ -197,6 +348,18 @@ html {
   display: flex;
   flex-direction: row;
   gap: 95px;
+
+  @media (max-width: 765px) {
+    gap: 35px;
+  }
+
+  @media (max-width: 520px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 400px) {
+    padding-bottom: 20px;
+  }
 }
 
 .books-list {
@@ -205,6 +368,11 @@ html {
   padding-right: 40px;
   gap: 40px 0px;
   padding-bottom: 40px;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .book {
@@ -213,6 +381,16 @@ html {
   height: 555px;
   border: 1px solid $black-color;
   padding: 15px 20px;
+
+  @media (max-width: 765px) {
+    width: 400px;
+    height: 401px;
+  }
+
+  @media (max-width: 520px) {
+    width: 280px;
+    height: 281px;
+  }
 }
 
 .category {
@@ -222,6 +400,11 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .category::after {
@@ -242,6 +425,14 @@ html {
   letter-spacing: 2px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (max-width: 765px) {
+    padding-top: 5px;
+  }
+
+  @media (max-width: 520px) {
+    line-height: 20px;
+  }
 }
 
 .book_author {
@@ -250,6 +441,11 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 520px) {
+    line-height: 20px;
+    font-size: 12px;
+  }
 }
 
 .book_description {
@@ -260,12 +456,41 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 765px) {
+    width: 285px;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 520px) {
+    width: 200px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 }
 
 .book__img {
   position: absolute;
   bottom: -1px;
   right: -40px;
+
+  @media (max-width: 765px) {
+    width: 130px;
+  }
+
+  @media (max-width: 520px) {
+    width: 80px;
+  }
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
 
 .book_buy {
@@ -297,11 +522,25 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   font-family: $inter-font;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 410px) {
+    font-size: 16px;
+  }
 }
 
 .menu {
   @extend %flex-row;
   padding-bottom: 40px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .menu__title {
@@ -312,6 +551,11 @@ html {
   letter-spacing: 2px;
   text-transform: capitalize;
   font-family: $forum-font;
+
+  @media (max-width: 520px) {
+    font-size: 30px;
+    line-height: 20px;
+  }
 }
 
 .menu_list {
@@ -320,6 +564,16 @@ html {
   width: 462px;
   align-items: stretch;
   gap: 40px;
+
+  @media (max-width: 520px) {
+    gap: 20px;
+    width: 350px;
+  }
+
+
+  @media (max-width: 410px) {
+    width: 280px;
+  }
 }
 
 .menu_item-name {
@@ -329,6 +583,11 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 410px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .menu_item-price {
@@ -339,6 +598,12 @@ html {
   letter-spacing: 2px;
   text-transform: capitalize;
   padding-left: 50px;
+}
+
+.desserts {
+  @media (max-width: 1100px) {
+    align-self: flex-end;
+  }
 }
 
 .title-right {
@@ -359,6 +624,16 @@ html {
   bottom: 20px;
   right: 105px;
   background-color: $brown-color;
+
+  @media (max-width: 520px) {
+    width: 50px;
+    right: 62px;
+  }
+
+  @media (max-width: 410px) {
+    display: none;
+  }
+  
 }
 
 .contacts__description {
@@ -369,6 +644,42 @@ html {
   letter-spacing: 2px;
   text-transform: capitalize;
   padding-bottom: 40px;
+
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 470px) {
+    gap: 50px;
+    font-size: 12px;
+    line-height: 10px;
+  }
+
+  @media (max-width: 385px) {
+    font-size: 10px;
+  }
+}
+
+iframe {
+  @media (max-width: 1250px) {
+    align-self: center;
+  }
+
+  @media (max-width: 760px) {
+    width: 400px;
+  }
+
+  @media (max-width: 470px) {
+    width: 280px;
+    height: 300px;
+  }
 }
 
 .phones-list-title {
@@ -376,6 +687,11 @@ html {
   font-size: 20px;
   line-height: 40px;
   letter-spacing: 2px;
+
+  @media (max-width: 470px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .phones-list {
@@ -390,11 +706,22 @@ html {
   font-size: 20px;
   line-height: 40px;
   letter-spacing: 2px;
+
+  @media (max-width: 470px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .library-cards_description {
   @extend %flex-row;
   margin-bottom: 40px;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
 }
 
 .library-cards_form {
@@ -406,6 +733,10 @@ html {
   font-size: 30px;
   letter-spacing: 0.6px;
   padding-bottom: 30px;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+  }
 }
 
 .form {
@@ -413,6 +744,15 @@ html {
   height: 386px;
   border: 3px solid $brown-color;
   padding: 17px;
+
+  @media (max-width: 665px) {
+    width: 400px;
+  }
+
+  @media (max-width: 460px) {
+    width: 280px;
+    height: 300px;
+  }
 }
 
 .form-content {
@@ -425,6 +765,13 @@ html {
   line-height: 50px;
   letter-spacing: 0.6px;
   text-align: left;
+
+  @media (max-width: 460px) {
+    & p {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
 }
 
 .form-input {
@@ -439,6 +786,16 @@ html {
 
   &::placeholder {
     color: #8E8E8E;
+  }
+
+  @media (max-width: 665px) {
+    width: 320px;
+  }
+
+  @media (max-width: 460px) {
+    width: 200px;
+    height: 38px;
+    font-size: 18px;
   }
 }
 
@@ -466,10 +823,19 @@ html {
     border: 1px solid $brown-color;
     background-color: $brown-color;
   }
+
+  @media (max-width: 460px) {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
 }
 
 .register {
   text-align: right;
+
+  @media (max-width: 1150px) {
+    text-align: center;
+  }
 }
 
 .get-card {
@@ -491,6 +857,17 @@ html {
   line-height: 40px;
   letter-spacing: 0.4px;
   padding-bottom: 35px;
+
+  @media (max-width: 1150px) {
+    padding-bottom: 4px;
+  }
+
+  @media (max-width: 510px) {
+    width: 280px;
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 15px;
+  }
 }
 
 .button {
@@ -540,6 +917,12 @@ html {
     left: 0px;
     background-color: $white-color;
   }
+
+  @media (max-width: 490px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .address {
@@ -572,6 +955,10 @@ html {
   display: flex;
   flex-direction: row;
   gap: 16px;
+
+  @media (max-width: 490px) {
+    justify-content: center
+  }
 }
 
 .footer_info {
@@ -579,6 +966,13 @@ html {
   margin: 0 auto;
   padding: 44px 20px;
   @extend %flex-row;
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
 }
 
 .footer_info p,
@@ -589,6 +983,10 @@ html {
   line-height: 20px;
   letter-spacing: 2px;
   transition: 1s;
+
+  @media (max-width: 620px) {
+    font-size: 16px;
+  }
 }
 
 .footer_info a:hover {
