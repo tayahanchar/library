@@ -52,6 +52,10 @@ html {
 .header-container {
   @extend %flex-row;
   gap: 60px;
+
+  @media (max-width: 520px) {
+    gap: 30px;
+  }
 }
 
 .logo {
@@ -65,6 +69,14 @@ html {
   &:hover {
     color: $brown-color;
   }
+
+  @media (max-width: 520px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 17px;
+  }
 }
 
 .header-right {
@@ -75,6 +87,34 @@ html {
   max-width: 652px;
 }
 
+.burger {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 520px) {
+    margin-left: 5px;
+    height: 15px;
+  }
+}
+
+.burger span {
+  width: 45px;
+  height: 1.5px;
+  background-color: $white-color;
+
+  @media (max-width: 520px) {
+    width: 30px;
+  }
+}
+
 .nav {
   flex-grow: 1;
   max-width: 584px;
@@ -83,6 +123,10 @@ html {
 .nav-list {
   @extend %flex-row;
   gap: 10px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .nav-list__link {
@@ -99,6 +143,11 @@ html {
 
 .profile {
   cursor: pointer;
+
+  @media (max-width: 520px) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .welcome {
@@ -107,6 +156,11 @@ html {
   background-size: cover;
   padding-top: 220px;
   padding-bottom: 160px;
+
+  @media (max-width: 430px) {
+    padding-top: 110px;
+    padding-bottom: 80px;
+  }
 }
 
 .welcome__title {
@@ -121,6 +175,23 @@ html {
   background-color: $dark-black-color;
   text-align: center;
   font-family: 'Forum', serif;
+
+  @media (max-width: 760px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 630px) {
+    width: 400px;
+    padding: 15px 20px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 430px) {
+    width: 290px;
+    padding: 7px 10px;
+    font-size: 26px;
+    line-height: 30px;
+  }
 }
 
 .title {
