@@ -644,6 +644,42 @@ html {
   letter-spacing: 2px;
   text-transform: capitalize;
   padding-bottom: 40px;
+
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 470px) {
+    gap: 50px;
+    font-size: 12px;
+    line-height: 10px;
+  }
+
+  @media (max-width: 385px) {
+    font-size: 10px;
+  }
+}
+
+iframe {
+  @media (max-width: 1250px) {
+    align-self: center;
+  }
+
+  @media (max-width: 760px) {
+    width: 400px;
+  }
+
+  @media (max-width: 470px) {
+    width: 280px;
+    height: 300px;
+  }
 }
 
 .phones-list-title {
@@ -651,6 +687,11 @@ html {
   font-size: 20px;
   line-height: 40px;
   letter-spacing: 2px;
+
+  @media (max-width: 470px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .phones-list {
@@ -665,11 +706,22 @@ html {
   font-size: 20px;
   line-height: 40px;
   letter-spacing: 2px;
+
+  @media (max-width: 470px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .library-cards_description {
   @extend %flex-row;
   margin-bottom: 40px;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
 }
 
 .library-cards_form {
@@ -681,6 +733,10 @@ html {
   font-size: 30px;
   letter-spacing: 0.6px;
   padding-bottom: 30px;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+  }
 }
 
 .form {
@@ -688,6 +744,15 @@ html {
   height: 386px;
   border: 3px solid $brown-color;
   padding: 17px;
+
+  @media (max-width: 665px) {
+    width: 400px;
+  }
+
+  @media (max-width: 460px) {
+    width: 280px;
+    height: 300px;
+  }
 }
 
 .form-content {
@@ -700,6 +765,13 @@ html {
   line-height: 50px;
   letter-spacing: 0.6px;
   text-align: left;
+
+  @media (max-width: 460px) {
+    & p {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
 }
 
 .form-input {
@@ -714,6 +786,16 @@ html {
 
   &::placeholder {
     color: #8E8E8E;
+  }
+
+  @media (max-width: 665px) {
+    width: 320px;
+  }
+
+  @media (max-width: 460px) {
+    width: 200px;
+    height: 38px;
+    font-size: 18px;
   }
 }
 
@@ -741,10 +823,19 @@ html {
     border: 1px solid $brown-color;
     background-color: $brown-color;
   }
+
+  @media (max-width: 460px) {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
 }
 
 .register {
   text-align: right;
+
+  @media (max-width: 1150px) {
+    text-align: center;
+  }
 }
 
 .get-card {
@@ -766,6 +857,17 @@ html {
   line-height: 40px;
   letter-spacing: 0.4px;
   padding-bottom: 35px;
+
+  @media (max-width: 1150px) {
+    padding-bottom: 4px;
+  }
+
+  @media (max-width: 510px) {
+    width: 280px;
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 15px;
+  }
 }
 
 .button {
