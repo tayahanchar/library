@@ -522,11 +522,25 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   font-family: $inter-font;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 410px) {
+    font-size: 16px;
+  }
 }
 
 .menu {
   @extend %flex-row;
   padding-bottom: 40px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .menu__title {
@@ -537,6 +551,11 @@ html {
   letter-spacing: 2px;
   text-transform: capitalize;
   font-family: $forum-font;
+
+  @media (max-width: 520px) {
+    font-size: 30px;
+    line-height: 20px;
+  }
 }
 
 .menu_list {
@@ -545,6 +564,16 @@ html {
   width: 462px;
   align-items: stretch;
   gap: 40px;
+
+  @media (max-width: 520px) {
+    gap: 20px;
+    width: 350px;
+  }
+
+
+  @media (max-width: 410px) {
+    width: 280px;
+  }
 }
 
 .menu_item-name {
@@ -554,6 +583,11 @@ html {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+
+  @media (max-width: 410px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .menu_item-price {
@@ -564,6 +598,12 @@ html {
   letter-spacing: 2px;
   text-transform: capitalize;
   padding-left: 50px;
+}
+
+.desserts {
+  @media (max-width: 1100px) {
+    align-self: flex-end;
+  }
 }
 
 .title-right {
@@ -584,6 +624,16 @@ html {
   bottom: 20px;
   right: 105px;
   background-color: $brown-color;
+
+  @media (max-width: 520px) {
+    width: 50px;
+    right: 62px;
+  }
+
+  @media (max-width: 410px) {
+    display: none;
+  }
+  
 }
 
 .contacts__description {
