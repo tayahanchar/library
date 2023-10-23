@@ -328,6 +328,7 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 400;
+  cursor: pointer;
 
   @media (max-width: 765px) {
     padding-left: 5px;
@@ -341,6 +342,37 @@ html {
     font-size: 12px;
     padding-left: 0px;
   }
+}
+
+.radio-list div {
+  cursor: pointer;
+}
+
+.season-list {
+  position: relative;
+}
+
+.favorites input[type=radio] {
+	display: none;
+}
+
+.favorites label:before {
+	content: "";
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+	background: url(../images/input.svg) 0 0 no-repeat;
+}
+
+.favorites input[type=radio]:checked + label:before {
+	background: url(../images/input-checked.svg) 0 0 no-repeat;
+}
+
+.favorites input {
+  cursor: pointer;
 }
 
 .radio-list {
@@ -381,6 +413,9 @@ html {
   height: 555px;
   border: 1px solid $black-color;
   padding: 15px 20px;
+  
+  animation: OpasityAnimation 1s;
+  animation-fill-mode: forwards;
 
   @media (max-width: 765px) {
     width: 400px;
@@ -390,6 +425,28 @@ html {
   @media (max-width: 520px) {
     width: 280px;
     height: 281px;
+  }
+}
+
+.book-off {
+  animation: OpasityOffAnimation 1s;
+}
+
+@keyframes OpasityAnimation {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes OpasityOffAnimation {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
   }
 }
 
