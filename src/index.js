@@ -1,6 +1,8 @@
 import './css/style.scss';
 import {booksList} from './books';
 
+/// favourites
+
 const seasonsRadioList = document.querySelector('.radio-list');
 const booksParent = document.querySelector('.books-list');
 
@@ -50,3 +52,20 @@ function shownBooksList(event, firstLoad) {
     setTimeout(addBooks, 1000);
   }
 };
+
+//// nav
+
+const headerRight = document.querySelector('.header-right');
+
+headerRight.addEventListener('mouseover', (event) => blurElements(event, 0.3));
+headerRight.addEventListener('mouseout', (event) => blurElements(event, 1));
+
+function blurElements(event, opasity) {
+  if(event.target.classList.contains('nav-list__link') || event.target.classList.contains('profile')) {
+    document.querySelectorAll('.nav-list__link').forEach(item => {
+      item.style.opacity = opasity;
+      document.querySelector('.profile').style.opacity = opasity;
+    })
+    event.target.style.opacity = 1;
+  }
+}

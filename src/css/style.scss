@@ -143,6 +143,7 @@ html {
 
 .profile {
   cursor: pointer;
+  transition: 0.5s;
 
   @media (max-width: 520px) {
     width: 20px;
