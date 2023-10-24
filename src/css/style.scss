@@ -35,9 +35,15 @@ html {
 }
 
 .header {
+  width: 100%;
   background-color: $black-color;
   color: $white-color;
   padding: 20px;
+}
+
+.header-fixed {
+  position: fixed;
+  z-index: 3;
 }
 
 .container {
@@ -155,7 +161,7 @@ html {
   background: url(../images/welcome.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 220px;
+  padding-top: 310px;
   padding-bottom: 160px;
 
   @media (max-width: 430px) {

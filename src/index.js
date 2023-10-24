@@ -69,3 +69,24 @@ function blurElements(event, opasity) {
     event.target.style.opacity = 1;
   }
 }
+
+////// Intersection Observer
+
+const options = {
+  root: null,
+  threshold: 0,
+}
+
+const headerObserver = new IntersectionObserver(callBack, options);
+const header = document.querySelector('.header');
+const welcome = document.querySelector('.welcome');
+headerObserver.observe(welcome);
+
+
+function callBack(entries) {
+  if(!entries[0].isIntersecting) {
+    header.classList.add('header-fixed');
+  } else {
+    header.classList.remove('header-fixed');
+  }
+}
