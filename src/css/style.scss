@@ -1056,3 +1056,24 @@ iframe {
 .footer_info a:hover {
   color: $brown-color;
 }
+
+.section {
+  transform: translate(0px, 0px);
+  transition: 1s;
+  animation: Blur 1s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translate(0px, 300px);
+  filter: blur(10px);
+}
+
+@keyframes Blur {
+  from {
+    filter: blur(10px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}

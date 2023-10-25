@@ -90,3 +90,25 @@ function callBack(entries) {
     header.classList.remove('header-fixed');
   }
 }
+
+
+////
+
+const sectionsList = document.querySelectorAll('.section');
+const sectionsObserver = new IntersectionObserver(sectionsCallBack, sectionsOptions);
+
+sectionsList.forEach(section => {
+  sectionsObserver.observe(section);
+  section.classList.add('section-hidden');
+});
+
+const sectionsOptions = {
+  threshold: 0.3,
+};
+
+function sectionsCallBack(entries, observer) {
+  if(entries[0].isIntersecting) {
+    entries[0].target.classList.remove('section-hidden');
+    observer.unobserve(entries[0].target);
+  }
+}
