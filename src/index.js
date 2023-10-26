@@ -112,3 +112,77 @@ function sectionsCallBack(entries, observer) {
     observer.unobserve(entries[0].target);
   }
 }
+
+/// corusel
+
+const rightButton = document.querySelector('.button__right');
+const leftButton = document.querySelector('.button__left');
+const coruselImgList = document.querySelectorAll('.corusel_item');
+const coruselControl = document.querySelector('.corusel-control');
+const coruselControls = document.querySelectorAll('.corusel-control__item');
+
+let itemWidth = 475;
+
+if(document.body.clientWidth <=520) {
+  itemWidth = 305;
+}
+
+let activePage = 0;
+let pages;
+if(document.body.clientWidth >= 1440) {
+  pages = 2;
+} else if (document.body.clientWidth < 1440 && document.body.clientWidth > 990 ) {
+  pages = 3;
+} else if (document.body.clientWidth <= 990) {
+  pages = 4;
+}
+
+
+rightButton.addEventListener('click', moveImgesLeft);
+leftButton.addEventListener('click', moveImgesRight);
+
+function moveImgesLeft() {
+  if(activePage >= pages) {
+    activePage = 0;
+  } else {
+    activePage++;
+  }
+  addTranform();
+  activePageControl();
+}
+
+function moveImgesRight() {
+  if(activePage === 0) {
+    activePage = pages;
+  } else {
+    activePage--;
+  }
+  addTranform();
+  activePageControl();
+}
+
+function addTranform() {
+  coruselImgList.forEach(item => {
+    item.style.transform = `translateX(-${itemWidth * activePage}px)`;
+    item.style.transition = '1s';
+  });
+}
+
+coruselControl.addEventListener('click', chooseActivePage);
+
+function chooseActivePage(event) {
+  if(event.target.classList.contains('corusel-control__item')) {
+    activePage = +event.target.dataset.number;
+
+    addTranform();
+    activePageControl();
+  }
+}
+
+function activePageControl() {
+  coruselControls.forEach(item => {
+    item.classList.remove('corusel-control__item--active');
+  });
+
+  coruselControls[activePage].classList.add('corusel-control__item--active');
+}

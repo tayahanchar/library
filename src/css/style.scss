@@ -272,29 +272,36 @@ html {
   }
 }
 
+.corusel__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
 .corusel-control {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 40px;
-
-  & div:nth-child(5) {
-    display: none;
-  }
 
   & div:nth-child(4) {
     display: none;
   }
 
+  & div:nth-child(5) {
+    display: none;
+  }
+
   @media (max-width: 1439px) {
-    & div:nth-child(5) {
+    & div:nth-child(4) {
       display: block;
     }
   }
 
   @media (max-width: 990px) {
-    & div:nth-child(4) {
+    & div:nth-child(5) {
       display: block;
     }
   }
@@ -312,6 +319,7 @@ html {
   height: 16px;
   background-color: $dark-black-color;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .corusel-control__item--active {
@@ -338,16 +346,20 @@ html {
   cursor: pointer;
 
   @media (max-width: 765px) {
-    padding-left: 5px;
+    padding-left: 25px;
   }
 
   @media (max-width: 520px) {
     font-size: 16px;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 405px) {
     font-size: 12px;
-    padding-left: 0px;
+    padding-left: 22px;
+  }
+
+  @media (max-width: 338px) {
+    padding-left: 20px;
   }
 }
 
@@ -372,6 +384,10 @@ html {
 	left: 0;
 	bottom: 5px;
 	background: url(../images/input.svg) 0 0 no-repeat;
+
+  @media (max-width: 520px) {
+    bottom: 2px;
+  }
 }
 
 .favorites input[type=radio]:checked + label:before {
@@ -1076,4 +1092,12 @@ iframe {
   to {
     filter: blur(0px);
   }
+}
+
+.button__left {
+  cursor: pointer;
+}
+
+.button__right {
+  cursor: pointer;
 }
